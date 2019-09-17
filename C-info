@@ -1,0 +1,56 @@
+C Help
+  - C is a lot like java
+  - replaced assembly
+  - the semi-direct predecessor of java
+  - In java
+    - Code --> VM --> Machine
+  - in C
+    - code --> Machine
+    - no such thing as exceptions
+    - you can mess up easier than in java
+      - doesn't care what your intent is
+    - 1 error, segmentation fault
+      - something you don't want
+      - CPU (Rock that we tricked into thinking)
+        - x86_64
+          - assembly code with lots of instructions
+        - registers (data storage areas)
+          - general purpose registers
+            - %rax %rcx %rdx %rbx
+            - each register can store 64 bits of data
+            - basic data types
+              - char (8 bits [1 byte])
+              - short (16 bits)
+              - int (32 bits)
+              - long (64 bits)
+              - long long (? bits)
+            - signed and unsigned data types
+              - not difference in bits
+              - signed: n-bit 2s complement integers
+                - (-2^(k-1) -> 2^(k-1) - 1)
+              - unsigned: treat entire bit string as a positive value
+                - (0 -> 2^k - 1)
+            - size_t: maximum possible size you can determine an array for
+            -floating point
+              - float (32)
+              - double (64)
+              - long double (?)
+      - Cache
+        - L1i, L1d, L2, L3
+        - slower than registers, but really fast
+      - RAM (Random access memory)
+        - general purpose storage
+        - programs swap data into RAM
+        - Java has the garbage collector
+        - C does not have the garbage collector
+          - You have to think about the garbage
+    - Unix used to be its own operating system
+      - introduced the concept of memory segmentation
+      - if a program takes up more space than allotted,
+      the CPU throws a segmentation fault because programs
+      shouldn't be able to take up the segmented space
+      of other programs
+        - security issues like viruses can segment into other space
+    - Pointers:
+      - references to addressees
+      -
